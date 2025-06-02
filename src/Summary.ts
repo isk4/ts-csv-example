@@ -13,4 +13,9 @@ export class Summary {
         private analyzer: MatchesAnalyzer,
         private reportGenerator: ReportGenerator
     ) {}
+
+    generate(matches: MatchData[]): void {
+        const analysis = this.analyzer.run(matches);
+        this.reportGenerator.run(analysis);
+    }
 }
