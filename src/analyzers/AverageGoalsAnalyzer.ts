@@ -1,5 +1,5 @@
-import { MatchesAnalyzer } from './Summary';
-import { MatchData } from './utils';
+import { MatchesAnalyzer } from '../Summary';
+import { MatchData } from '../utils';
 
 export class AverageGoalsAnalyzer implements MatchesAnalyzer {
     constructor(private teamName: string) {}
