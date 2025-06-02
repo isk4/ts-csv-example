@@ -11,10 +11,11 @@ export class AverageGoalsAnalyzer implements MatchesAnalyzer {
         matches.forEach((match: MatchData) => {
             if (match[1] === this.teamName) {
                 goalCount += match[3];
+                matchCount++;
             } else if (match[2] === this.teamName) {
                 goalCount += match[4];
+                matchCount++;
             }
-            matchCount++;
         });
         return `The team ${this.teamName} scored on average ${goalCount/matchCount} goals per game.`;
     }
